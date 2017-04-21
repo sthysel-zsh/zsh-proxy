@@ -6,8 +6,8 @@ zsh plugin to deal with corporate proxies.
 
 Set site specific proxy detail in ~/.proxy.conf
 
-```
-PROXY=http://${PROXY_USER}:${PROXY_PASSWORD@10.11.12.13:6666
+``` zsh
+PROXY=http://${PROXY_USER}:${PROXY_PASSWORD}@10.11.12.13:6666
 NO_PROXY=localhost,.bulshitcorp.net,jira,complaints,whistleblowerblower
 ```
 

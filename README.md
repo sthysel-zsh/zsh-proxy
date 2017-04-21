@@ -2,7 +2,7 @@
 
 ![](pics/slender.png)
 
-zsh plugin to deal with corp proxies.
+zsh plugin to deal with corporate proxies.
 
 Set site specific proxy detail in ~/.proxy.conf
 
@@ -17,9 +17,6 @@ Provides
 | ------- | ----------- |
 | proxy-on | Enables proxy | 
 | proxy-off | Disables proxy | 
-
-# Install
-
 
 
 # Install using zplug

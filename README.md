@@ -4,14 +4,14 @@
 
 zsh plugin to deal with corporate proxies.
 
-Set site specific proxy detail in ~/.proxy.conf
+Set site specific proxy detail in ~/.proxy.conf like so
 
 ``` zsh
 PROXY=http://${PROXY_USER}:${PROXY_PASSWORD}@10.11.12.13:6666
 NO_PROXY=localhost,.bulshitcorp.net,jira,complaints,whistleblowerblower
 ```
 
-Provides 
+The plugin provides these switches to flick when necessary:
 
 | Command | Description |
 | ------- | ----------- |

@@ -18,16 +18,10 @@ proxy-on() {
       export no_proxy=${NO_PROXY}
       export NO_PROXY=${NO_PROXY}
     else
-      echo '${PROXY_CONF}' does not exist.
+      echo ${PROXY_CONF} does not exist.
     fi
 
 }
-
-if [[ $(hostname) == "devarch" ]]
-then
-	echo "Proxy is configured"
-	proxy-on
-fi
 
 proxy-off() {
     unset https_proxy
@@ -35,6 +29,11 @@ proxy-off() {
     unset no_proxy
 }
 
+if [[ $(hostname) == "devarch" ]]
+then
+	echo "Proxy is configured"
+	proxy-on
+fi
 
 case "${MACHINE_LOCATION}" in
   WORK) proxy-on ;;

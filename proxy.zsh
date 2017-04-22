@@ -2,22 +2,25 @@
 # on a post-it on the laptop lid, stick all creds in ~/.proxy.conf, if the file
 # exist load it here
 
+PROXY_CONF=${HOME}/.proxy.conf
+
 proxy-on() {
     # load proxy config
-    PROXY_CONF=${HOME}/.proxy.conf
     if [ -e "${PROXY_CONF}" ]
     then
       source ${PROXY_CONF}
+      export https_proxy=${PROXY}
+      export HTTPS_PROXY=${PROXY}
+
+      export http_proxy=${PROXY}
+      export HTTP_PROXY=${PROXY}
+
+      export no_proxy=${NO_PROXY}
+      export NO_PROXY=${NO_PROXY}
+    else
+      echo '${PROXY_CONF}' does not exist.
     fi
 
-    export https_proxy=${PROXY}
-    export HTTPS_PROXY=${PROXY}
-
-    export http_proxy=${PROXY}
-    export HTTP_PROXY=${PROXY}
-
-    export no_proxy=${NO_PROXY}
-    export NO_PROXY=${NO_PROXY}
 }
 
 if [[ $(hostname) == "devarch" ]]
@@ -34,6 +37,6 @@ proxy-off() {
 
 
 case "${MACHINE_LOCATION}" in
-  HP) proxy-on ;;
+  WORK) proxy-on ;;
   *) ;;
 esac

@@ -11,6 +11,9 @@ PROXY=http://${PROXY_USER}:${PROXY_PASSWORD}@10.11.12.13:6666
 NO_PROXY=localhost,.bulshitcorp.net,jira,complaints,whistleblowerblower
 ```
 
+If the environt variable `MACHINE_LOCATION` is set to `WORK` the proxy
+config will be loaded automatically.
+
 The plugin provides these switches to flick when necessary:
 
 | Command | Description |

@@ -24,6 +24,6 @@ The plugin provides these switches to flick when necessary:
 Using [zplug](https://github.com/zplug/zplug) in .zshrc 
 
 ```
-zplug "sthysel/zsh-proxy"
+zplug "sthyselzsh/zsh-proxy"
 ```
 

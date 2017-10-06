@@ -27,6 +27,10 @@ proxy-off() {
     unset https_proxy
     unset http_proxy
     unset no_proxy
+
+    unset HTTPS_PROXY
+    unset HTTP_PROXY
+    unset NO_PROXY
 }
 
 if [[ $(hostname) == "devarch" ]]
